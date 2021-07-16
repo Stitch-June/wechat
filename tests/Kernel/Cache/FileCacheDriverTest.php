@@ -43,8 +43,8 @@ class FileCacheDriverTest extends TestCase
         $this->assertEquals($value, $this->fileCache->get($key . '1'));
         $this->assertEquals('no', $this->fileCache->get($key . '2', 'no'));
         $this->assertEquals($value, $this->fileCache->get($key . '3'));
-//        sleep(2);
-//        $this->assertEquals('no', $this->fileCache->get($key . '3', 'no'));
+        sleep(2);
+        $this->assertEquals('no', $this->fileCache->get($key . '3', 'no'));
     }
 
     public function testDelete()
